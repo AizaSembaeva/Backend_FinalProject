@@ -1,18 +1,13 @@
-(function () {
-  function getApiBase() {
-    const cfg = window.__APP_CONFIG__ || {};
-    if (cfg.useRelativeApi) return "";
-    return cfg.apiBase || "";
-  }
+const API = "https://backend-finalproject-qy0z.onrender.com";
 
+(function () {
   function getToken() {
     const auth = window.storage?.read();
     return auth?.token || null;
   }
 
   async function request(path, opts) {
-    const base = getApiBase();
-    const url = base + path;
+    const url = API + path; 
 
     const headers = Object.assign(
       { "Content-Type": "application/json" },
@@ -26,11 +21,8 @@
     let data = null;
 
     const ct = res.headers.get("content-type") || "";
-    if (ct.includes("application/json")) {
-      data = await res.json().catch(() => null);
-    } else {
-      data = await res.text().catch(() => null);
-    }
+    if (ct.includes("application/json")) data = await res.json().catch(() => null);
+    else data = await res.text().catch(() => null);
 
     if (!res.ok) {
       const msg =
