@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>BeautySalon • Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="app.css"/>
+
+  <script defer src="js/config.js"></script>
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/api.js"></script>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/validators.js"></script>
+  <script defer src="js/ui.js"></script>
+
+  <script defer src="js/pages/services.js"></script>
+</head>
+<body data-page="services">
+  <div id="app-header"></div>
+
+  <main class="container">
+    
+<h2 class="page-title">Services</h2>
+<p class="muted">Browse services and book an appointment.</p>
+
+<div id="servicesMsg"></div>
+<div class="service-grid" id="servicesGrid"></div>
+
+<section class="section">
+  <h2 class="page-title">Create a booking</h2>
+  <div class="card">
+    <form id="bookingForm">
+      <div class="form-row">
+        <label for="serviceId">Service</label>
+        <select id="serviceId" name="serviceId">
+          <option value="">Loading...</option>
+        </select>
+        <div class="error-message"></div>
+      </div>
+
+      <div class="form-row">
+        <label for="dateTime">Date & time</label>
+        <input id="dateTime" name="dateTime" type="datetime-local" required />
+        <div class="error-message"></div>
+      </div>
+
+      <div class="form-row">
+        <label for="note">Note (optional)</label>
+        <textarea id="note" name="note" placeholder="Any preferences?"></textarea>
+        <div class="error-message"></div>
+      </div>
+
+      <button class="btn" type="submit">Book</button>
+    </form>
+    <div id="bookingMsg"></div>
+    <p class="muted" style="margin-top:.8rem;">
+      After creating a booking, open <a href="profile.html">Profile</a> to see it and delete it.
+    </p>
+  </div>
+</section>
+
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

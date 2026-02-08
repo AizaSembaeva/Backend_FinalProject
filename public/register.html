@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>BeautySalon • Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="app.css"/>
+
+  <script defer src="js/config.js"></script>
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/api.js"></script>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/validators.js"></script>
+  <script defer src="js/ui.js"></script>
+
+  <script defer src="js/pages/register.js"></script>
+</head>
+<body data-page="register">
+  <div id="app-header"></div>
+
+  <main class="container">
+    
+<h2 class="page-title">Register</h2>
+<div class="card" style="max-width:700px;">
+  <form id="registerForm">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required />
+      <div class="error-message"></div>
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required />
+      <div class="error-message"></div>
+    </div>
+    <div class="form-row">
+      <label for="phone">Phone (optional)</label>
+      <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" />
+      <div class="error-message"></div>
+    </div>
+    <div class="form-row">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="new-password" required />
+      <div class="error-message"></div>
+      <p class="muted" style="margin-top:.35rem;">Minimum 8 characters.</p>
+    </div>
+    <button class="btn" type="submit">Create account</button>
+  </form>
+  <div id="registerMsg"></div>
+</div>
+
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

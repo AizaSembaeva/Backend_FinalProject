@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>BeautySalon • Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="app.css"/>
+
+  <script defer src="js/config.js"></script>
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/api.js"></script>
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/validators.js"></script>
+  <script defer src="js/ui.js"></script>
+
+  <script defer src="js/pages/login.js"></script>
+</head>
+<body data-page="login">
+  <div id="app-header"></div>
+
+  <main class="container">
+    
+<h2 class="page-title">Login</h2>
+<div class="grid-2">
+  <div class="card">
+    <form id="loginForm">
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+        <div class="error-message"></div>
+      </div>
+      <div class="form-row">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required />
+        <div class="error-message"></div>
+      </div>
+      <button class="btn" type="submit">Login</button>
+    </form>
+    <div id="loginMsg"></div>
+  </div>
+  <div class="card">
+    <h3 style="color: var(--brand-deep);">No account yet?</h3>
+    <p class="muted">Click the button below and register.</p>
+    <a class="btn" href="register.html">Create account</a>
+  </div>
+</div>
+
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>
